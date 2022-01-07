@@ -9,16 +9,16 @@ let result = document.getElementById('result');
 submitbtn.addEventListener('click', function(e){
    
     if(parseInt(hours.value) && 0 < hours.value && hours.value < 13){
-        if(parseInt(min.value) && -1 < min.value && min.value < 60)
+        if(parseInt(min.value) && min.value > 0  && min.value < 60 || parseInt(min.value) == 0)
         {
             if(amPm.value.toLowerCase() == 'am' || amPm.value.toLowerCase()== 'pm'){
                 getData();
             }
            else{
-              result.textContent= "Enter am or pm only";
+              result.textContent= "Enter 'am' or 'pm' only";
            }
         }else{
-            result.textContent="Enter minutes 00 - 60";
+            result.textContent="Enter minutes 00 - 59";
         }
   
     

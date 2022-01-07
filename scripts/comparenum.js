@@ -18,6 +18,6 @@ function getData(){
     fetch(`https://dannyallinone.azurewebsites.net/MiniChallenges/miniCh4/${num1.value}/${num2.value}`)
     .then(response => response.text())
     .then(data => {
-        result.textContent = data;
+        result.innerHTML = data;
     });
 }
