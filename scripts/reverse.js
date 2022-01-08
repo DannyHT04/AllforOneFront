@@ -9,7 +9,7 @@ submitbtn.addEventListener('click',function(e){
     if(parseInt(num.value)){
         getData();
     }else{
-        result1.textContent="Enter in a whole number!";
+        result.textContent="Enter in a whole number!";
     }
     
 });
