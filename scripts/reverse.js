@@ -9,7 +9,7 @@ submitbtn.addEventListener('click',function(e){
     if(parseInt(num.value)){
         getData();
     }else{
-        alert("Enter in a whole number!");
+        result1.textContent="Enter in a whole number!";
     }
     
 });
@@ -24,11 +24,11 @@ function getData(){
 }
 
 submitbtn2.addEventListener('click',function(e){
-            getData();
+            getData1();
 });
 
 
-function getData(){
+function getData1(){
     fetch(`https://dannyallinone.azurewebsites.net/MiniChallenges/miniCh7/string/${word.value}`)
     .then(response => response.text())
     .then(data => {
